@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { mapValuesLimit } from "async";
+import React, { useState, useEffect, useContext } from "react";
+import "./App.css";
+import AddTasks from "./Components/AddTask/AddTasks";
+import TodoElement from "./Components/TodoElement/Todo";
+import { TodoContext } from "./Store/TodoProvider";
 
 function App() {
+  const [todo, setTodo] = useContext(TodoContext);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddTasks />
+      <div className="todoBoxes">
+        {todo.map((value, index) => {
+          return (
+            <TodoElement
+              name={value.name}
+              tags={value.tags}
+              date={value.date}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

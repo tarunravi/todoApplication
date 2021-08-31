@@ -1,0 +1,56 @@
+.AddTasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 70vh;
+  height: 30vh;
+  background-color: white;
+  box-shadow: 2px 2px 5px grey;
+  padding: 10px;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  padding: 1vh;
+  width: 100%;
+  justify-content: space-between;
+}
+.inputButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  margin-right: 10px;
+}
+
+.addButton {
+  box-shadow: 2px 2px 5px grey;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.date {
+  display: flex;
+  padding: 1vh;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: red;
+  width: 45vh;
+  padding: 1vh;
+}
