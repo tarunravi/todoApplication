@@ -50,7 +50,17 @@
   align-items: center;
   justify-content: center;
 
-  background-color: red;
+  box-shadow: 2px 2px 5px grey;
+  border-radius: 20px;
   width: 45vh;
   padding: 1vh;
+}
+
+.nope {
+  background-color: gray;
+  color: white;
+}
+
+.yes {
+  background-color: white;
 }
