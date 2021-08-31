@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Todo.css";
-function Todo({ name, tags, date }) {
+import { TodoContext } from "../../Store/TodoProvider";
+
+function Todo({ name, tags, date, keyy }) {
+  const [todo, setTodo] = useContext(TodoContext);
+
   return (
     <div className="TodoBox">
-      <div className="button" />
+      <div
+        className="button"
+        onClick={() => {
+          setTodo(
+            todo.filter(function (obj) {
+              return obj.keyy !== keyy;
+            })
+          );
+        }}
+      />
       <div className="contents">
         <h1>{name}</h1>
         <h2>{tags}</h2>
       </div>
-      <div className="date">
+      <div className="datee">
         <h1>{date}</h1>
       </div>
     </div>

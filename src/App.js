@@ -18,6 +18,7 @@ function App() {
               name={value.name}
               tags={value.tags}
               date={value.date}
+              keyy={value.keyy}
             />
           );
         })}

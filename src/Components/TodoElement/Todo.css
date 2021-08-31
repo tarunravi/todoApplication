@@ -1,19 +1,18 @@
 .TodoBox {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: red;
   width: 70vh;
-  height: 10vh;
+  height: 15vh;
+  align-items: center;
   background-color: white;
   box-shadow: 2px 2px 5px grey;
   margin: 10px;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .button {
   width: 4vh;
   height: 4vh;
   border: 2px solid black;
-  margin-left: 20px;
 }

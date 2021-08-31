@@ -3,14 +3,7 @@ import React, { useState, createContext } from "react";
 export const TodoContext = createContext();
 
 export const TodoProvider = (props) => {
-  const [todo, setTodo] = useState([
-    { name: "hi", tags: ["1", "2"], date: "05/23/23" },
-    { name: "hi", tags: ["1", "2"], date: "05/23/23" },
-    { name: "hi", tags: ["1", "2"], date: "05/23/23" },
-    { name: "hi", tags: ["1", "2"], date: "05/23/23" },
-    { name: "hi", tags: ["1", "2"], date: "05/23/23" },
-    { name: "hi", tags: ["1", "2"], date: "05/23/23" },
-  ]);
+  const [todo, setTodo] = useState([]);
 
   return (
     <TodoContext.Provider value={[todo, setTodo]}>

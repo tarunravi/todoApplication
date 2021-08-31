@@ -49,7 +49,15 @@ function AddTasks() {
         className="create"
         onClick={() => {
           if (title !== "" && tags !== "" && date !== "")
-            setTodo([...todo, { name: title, tags: tags, date: date }]);
+            setTodo([
+              ...todo,
+              {
+                name: title,
+                tags: tags,
+                date: date,
+                keyy: (Math.random() + 1).toString(36).substring(7),
+              },
+            ]);
         }}
       >
         <div className="createButton">Create</div>
